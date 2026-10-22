@@ -1,0 +1,144 @@
+{
+  "fastbite-v2": {
+    "origen": "G:\\IUP - Yamith Alexander Ardila Cabrera\\Ingenieria en Sistemas - Alexsters\\Materias\\Arquitectura de Software\\Unificar Fastbite\\fastbite-v2\\fastbite-v2",
+    "archivos": [
+      {
+        "ruta": ".gitignore",
+        "sha256": "d237c2bbc393151db5f3df19d9c834d274e4fceb0e6b2cc00d6a12960965fa8f"
+      },
+      {
+        "ruta": "COMANDOS.md",
+        "sha256": "1bf1d2e1d25a543245a78bb259d85d5e21602d3ca00caa2acab865863e199639"
+      },
+      {
+        "ruta": "compose.yaml",
+        "sha256": "51a8d4e4445d1917bb1763b68a3205915ca6b1708c6e389c938475b8966fad4b"
+      },
+      {
+        "ruta": "fastbite.ps1",
+        "sha256": "2e355eeff5e25d66a465d7c7a67dbf0496886d61aa95d3f6e3254567ca4eb0d0"
+      },
+      {
+        "ruta": "iniciar-fastbite.ps1",
+        "sha256": "c5f6c305ce56b748b040f279f7cf167c8f6a16c0577f0710663d6421296765fc"
+      },
+      {
+        "ruta": "menu-service/main.py",
+        "sha256": "f582ead5bd321e074d8bceef9343b31a0e9bed05f4c39b789b3df5ca92d50635"
+      },
+      {
+        "ruta": "menu-service/requirements.txt",
+        "sha256": "a6ab251b14fa480530dfa516f88e1d782b7a961cf8a3b464f35ebfb37dd74f00"
+      },
+      {
+        "ruta": "notifier-service/README.md",
+        "sha256": "5680741bfaf152739d4e461efae7a3670edb98f8bf48422e7032a70e0033daa6"
+      },
+      {
+        "ruta": "notifier-service/main.py",
+        "sha256": "f855c75cb861574a9db1dbdaf37d3911ef916556c571a375098c237c8a54b55f"
+      },
+      {
+        "ruta": "notifier-service/prueba_rabbitmq.py",
+        "sha256": "698705631367b14353d9566f6c4e3ff984d4ebc4c8fd6448c47f0b5086d18da7"
+      },
+      {
+        "ruta": "notifier-service/pruebas.py",
+        "sha256": "072f0829093bf24a54476bed1a57d40ffbcdb3de60359f0f3fea9c1cc41da0e7"
+      },
+      {
+        "ruta": "notifier-service/requirements.txt",
+        "sha256": "0134a04aac35eb0303f8386df00265709a1b835c4a8cec296cf12f29926a7f38"
+      },
+      {
+        "ruta": "notifier-service/tests/test_eventos.py",
+        "sha256": "843d91df0b255b8d2a5b7fb7d53016273ae9a72688a721b8da5122c5a2e91c26"
+      },
+      {
+        "ruta": "orders-service/eventos.py",
+        "sha256": "eeb9301cdc6570a49e5397b2de906b80a19220e77c1ae0949382d4d29f042eff"
+      },
+      {
+        "ruta": "orders-service/main.py",
+        "sha256": "34de0cc2890bbcceaa447628e8e0607967f4f39ae299a0a362e2dd94858c17f2"
+      },
+      {
+        "ruta": "orders-service/notificaciones.py",
+        "sha256": "8c2bc916d7f0c457bfc9c1b3e67f26a0c7b33fceae50eadd7a4e387cae809681"
+      },
+      {
+        "ruta": "orders-service/orders_service_cqrs_extension.py",
+        "sha256": "880f32d7765e87fedb59b6c2bfb6eaacc58933a97e052e2309427ab31f89bc95"
+      },
+      {
+        "ruta": "orders-service/requirements.txt",
+        "sha256": "cf690290390db43ab96d787385c260ebe48cd4225ac56e350cc2958834921315"
+      },
+      {
+        "ruta": "orders-service/test_cqrs.py",
+        "sha256": "25fe0a9168fda915b6a34ce45552690b894d17da3da7c30037ac4fda0526b2c8"
+      },
+      {
+        "ruta": "orders-service/plugins/pago_efectivo.py",
+        "sha256": "c72ed008369a04166be1264d498b719c0f1297be08574e0a56c008008e6c4766"
+      },
+      {
+        "ruta": "orders-service/plugins/pago_nequi.py",
+        "sha256": "95c02130b70170f8f63b66417f29419401ed6cfecc7a9148b062a948b4f67f7d"
+      },
+      {
+        "ruta": "orders-service/plugins/pago_tarjeta.py",
+        "sha256": "67928886f39e89d58cce4fcccb41b6b41928b6629ea1e6ae6eafdbda63606dd4"
+      },
+      {
+        "ruta": "users-service/main.py",
+        "sha256": "c6ab28c1a3bfcc39a0bd5a0e45f158630e1509f2e74960dffe6ba5d2d45a18b8"
+      },
+      {
+        "ruta": "users-service/requirements.txt",
+        "sha256": "a6ab251b14fa480530dfa516f88e1d782b7a961cf8a3b464f35ebfb37dd74f00"
+      }
+    ]
+  },
+  "fastbite-v4": {
+    "origen": "G:\\IUP - Yamith Alexander Ardila Cabrera\\Ingenieria en Sistemas - Alexsters\\Materias\\Arquitectura de Software\\Unificar Fastbite\\fastbite-v4\\fastbite-v4",
+    "archivos": [
+      {
+        "ruta": "orders-service-cqrs-extension.py",
+        "sha256": "880f32d7765e87fedb59b6c2bfb6eaacc58933a97e052e2309427ab31f89bc95"
+      },
+      {
+        "ruta": "orders_service_cqrs_extension.py",
+        "sha256": "880f32d7765e87fedb59b6c2bfb6eaacc58933a97e052e2309427ab31f89bc95"
+      },
+      {
+        "ruta": "test_cqrs_extension.py",
+        "sha256": "d50bed5fd2b6ea4da7885e0cc674c88551dd7c3a4c76c88ef687e140ad7ef614"
+      },
+      {
+        "ruta": "docker/Dockerfile.menu-service",
+        "sha256": "5026875fb7c85d375e64a81e40bea8e78b461a9fd5dfaeee08267f9f8e567e68"
+      },
+      {
+        "ruta": "docker/Dockerfile.orders-service",
+        "sha256": "5f9ae8c7150d8fea91811c8354e0be0183f12ac7e32d922fba14e34783a08482"
+      },
+      {
+        "ruta": "docker/Dockerfile.users-service",
+        "sha256": "0b99e4689d4af8d4710807c3d7ea3b3257f34dbd928ff028da367de8a6c6578f"
+      },
+      {
+        "ruta": "docker/docker-compose.yml",
+        "sha256": "b2a15a643cf550b258dcad8ded1deb5f8e5a10b23c164dc119d0f53b416778ca"
+      },
+      {
+        "ruta": "gateway-service/main.py",
+        "sha256": "62e514c0cfa29b302e7825814e0b267afd0b11a8fa860e2a9683d5ed9e49198a"
+      },
+      {
+        "ruta": "gateway-service/requirements.txt",
+        "sha256": "d029557472e508036373ceba9e1ea549c5e8ae368ce5b535dc06987c9fc63649"
+      }
+    ]
+  }
+}

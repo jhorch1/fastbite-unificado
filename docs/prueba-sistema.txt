@@ -1,0 +1,34 @@
+OK: health HTTP 8000
+OK: health HTTP 8001
+OK: health HTTP 8002
+OK: health HTTP 8003
+OK: catalogo usuarios
+OK: catalogo menu
+OK: compatibilidad ruta v4
+OK: Gateway conserva 404
+OK: Gateway rechaza servicio desconocido
+OK: crear pedido efectivo x1: HTTP 201
+OK: total calculado desde menu
+OK: transicion enviado
+OK: transicion en camino
+OK: transicion entregado
+OK: bloqueo de estado final
+OK: 4 avisos reales via RabbitMQ
+OK: crear pedido nequi x1: HTTP 201
+OK: plugin nequi
+OK: crear pedido tarjeta x7: HTTP 201
+OK: tarjeta rechazada y pedido cancelado
+OK: validacion de entrada HTTP 422
+OK: crear pedido efectivo x1: HTTP 201
+OK: actualizacion sin broker
+OK: 2 eventos pendientes durante caida
+OK: pedidos sobreviven recreacion contenedor
+OK: eventos sobreviven recreacion contenedor
+OK: avisos sobreviven recreacion contenedor
+OK: outbox sobrevive recreacion contenedor
+OK: reconexion automatica al broker
+OK: entrega diferida sin duplicados
+OK: outbox drenada
+OK: CQRS cancelacion e identidad coherentes
+OK: historial inmutable con snapshots
+TOTAL: 33 comprobaciones correctas

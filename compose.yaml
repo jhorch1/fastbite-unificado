@@ -1,0 +1,102 @@
+# Separa los contenedores y volúmenes de las otras versiones de FastBite.
+name: fastbite-unificado
+
+# Los cuatro servicios HTTP reutilizan esta configuración y la misma imagen.
+x-app: &app
+  image: fastbite-unificado:local
+  restart: unless-stopped
+  init: true
+  healthcheck:
+    test: ["CMD", "python", "-c", "import os,urllib.request; urllib.request.urlopen('http://127.0.0.1:'+os.environ['PORT']+'/health',timeout=3)"]
+    interval: 5s
+    timeout: 4s
+    retries: 12
+    start_period: 10s
+
+services:
+  rabbitmq:
+    image: rabbitmq:4.1-management
+    restart: unless-stopped
+    hostname: fastbite-rabbitmq
+    # Publica los puertos solo en este equipo; dentro de Docker se usa el DNS del servicio.
+    ports:
+      - "127.0.0.1:${AMQP_PORT:-5672}:5672"
+      - "127.0.0.1:${RABBITMQ_UI_PORT:-15672}:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-fastbite}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:-fastbite_local}
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 20s
+
+  users-service:
+    <<: *app
+    working_dir: /app/users-service
+    environment:
+      PORT: "8001"
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001"]
+    ports:
+      - "127.0.0.1:${USERS_PORT:-8001}:8001"
+
+  menu-service:
+    <<: *app
+    working_dir: /app/menu-service
+    environment:
+      PORT: "8002"
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8002"]
+    ports:
+      - "127.0.0.1:${MENU_PORT:-8002}:8002"
+
+  orders-service:
+    <<: *app
+    working_dir: /app/orders-service
+    environment:
+      PORT: "8003"
+      # localhost apuntaría al propio contenedor, no a Usuarios o Menú.
+      USERS_SERVICE_URL: http://users-service:8001
+      MENU_SERVICE_URL: http://menu-service:8002
+      RABBITMQ_URL: amqp://${RABBITMQ_USER:-fastbite}:${RABBITMQ_PASSWORD:-fastbite_local}@rabbitmq:5672/%2F
+      ORDERS_OUTBOX_PATH: /data/pedidos.sqlite3
+      NOTIFIER_DB_PATH: /data/notificaciones.sqlite3
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8003"]
+    ports:
+      - "127.0.0.1:${ORDERS_PORT:-8003}:8003"
+    volumes:
+      - orders-data:/data
+    # El arranque espera respuestas saludables, no solo procesos iniciados.
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      users-service:
+        condition: service_healthy
+      menu-service:
+        condition: service_healthy
+
+  gateway-service:
+    <<: *app
+    # Basta construir una vez la imagen que comparten los servicios HTTP.
+    build: .
+    environment:
+      PORT: "8000"
+      USERS_SERVICE_URL: http://users-service:8001
+      MENU_SERVICE_URL: http://menu-service:8002
+      ORDERS_SERVICE_URL: http://orders-service:8003
+    ports:
+      - "127.0.0.1:${GATEWAY_PORT:-8000}:8000"
+    depends_on:
+      users-service:
+        condition: service_healthy
+      menu-service:
+        condition: service_healthy
+      orders-service:
+        condition: service_healthy
+
+# Los datos sobreviven a la eliminación de contenedores con compose down.
+volumes:
+  orders-data:
+  rabbitmq-data:

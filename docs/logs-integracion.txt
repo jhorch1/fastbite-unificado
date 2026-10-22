@@ -1,0 +1,110 @@
+orders-service-1   | INFO:     Started server process [7]
+orders-service-1   | INFO:     Waiting for application startup.
+orders-service-1   | INFO:     Application startup complete.
+gateway-service-1  | INFO:     Started server process [7]
+orders-service-1   | INFO:     Uvicorn running on http://0.0.0.0:8003 (Press CTRL+C to quit)
+gateway-service-1  | INFO:     Waiting for application startup.
+gateway-service-1  | INFO:     Application startup complete.
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /pedidos HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+gateway-service-1  | INFO:     127.0.0.1:41788 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:36944 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:36950 - "GET /health HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /pedidos HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /pedidos/eventos HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:59980 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36666 - "GET / HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36666 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+gateway-service-1  | INFO:     127.0.0.1:59996 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:58436 - "GET /health HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /notificaciones HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:58444 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:54400 - "GET /health HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /notificaciones/salud HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /notificaciones/salud HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /notificaciones/salud HTTP/1.1" 200 OK
+orders-service-1   | Evento pendiente; reintento RabbitMQ en 5 s: [Errno -2] Name or service not known
+orders-service-1   | RabbitMQ no disponible ([Errno -2] Name or service not known). Reintento en 5 s...
+gateway-service-1  | INFO:     127.0.0.1:54404 - "GET /health HTTP/1.1" 200 OK
+orders-service-1   | INFO:     127.0.0.1:38050 - "GET /health HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /notificaciones/salud HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /notificaciones/salud HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:47280 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:47290 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:39714 - "GET /health HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /notificaciones/salud HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /notificaciones/salud HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /notificaciones/salud HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:48476 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36966 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/usuarios HTTP/1.1" 200 OK
+orders-service-1   | [notificador] usuario 1: Hola Juan Perez: tu pedido #4 por $8000 fue creado. Estado del pedido: creado. Pago con efectivo: aprobado.
+orders-service-1   | [notificador] usuario 1: Hola usuario 1: tu pedido #4 paso de 'creado' a 'cancelado'. Total $8000.
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/menu HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/usuarios/usuarios/1 HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/usuarios/99999 HTTP/1.1" 404 Not Found
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/desconocido HTTP/1.1" 404 Not Found
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /notificaciones/salud HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /notificaciones HTTP/1.1" 200 OK
+orders-service-1   | INFO:     127.0.0.1:59378 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "POST /api/pedidos HTTP/1.1" 201 Created
+gateway-service-1  | INFO:     172.19.0.1:36970 - "PUT /api/pedidos/1 HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "PUT /api/pedidos/1 HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "PUT /api/pedidos/1 HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "PUT /api/pedidos/1 HTTP/1.1" 409 Conflict
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "POST /api/pedidos HTTP/1.1" 201 Created
+gateway-service-1  | INFO:     127.0.0.1:48482 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "POST /api/pedidos HTTP/1.1" 201 Created
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /notificaciones/salud HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /notificaciones HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /pedidos/resumen HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.6:38400 - "GET /pedidos/eventos HTTP/1.1" 200 OK
+orders-service-1   | INFO:     127.0.0.1:59390 - "GET /health HTTP/1.1" 200 OK
+orders-service-1   | INFO:     127.0.0.1:53210 - "GET /health HTTP/1.1" 200 OK
+orders-service-1   | INFO:     127.0.0.1:53218 - "GET /health HTTP/1.1" 200 OK
+orders-service-1   | INFO:     127.0.0.1:35506 - "GET /health HTTP/1.1" 200 OK
+orders-service-1   | INFO:     127.0.0.1:35510 - "GET /health HTTP/1.1" 200 OK
+orders-service-1   | INFO:     127.0.0.1:36178 - "GET /health HTTP/1.1" 200 OK
+orders-service-1   | INFO:     127.0.0.1:36184 - "GET /health HTTP/1.1" 200 OK
+orders-service-1   | INFO:     127.0.0.1:40556 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "POST /api/pedidos HTTP/1.1" 422 Unprocessable Entity
+gateway-service-1  | INFO:     172.19.0.1:36970 - "POST /api/pedidos HTTP/1.1" 201 Created
+gateway-service-1  | INFO:     172.19.0.1:36970 - "PUT /api/pedidos/4 HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/pedidos HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/pedidos/eventos HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/pedidos HTTP/1.1" 502 Bad Gateway
+gateway-service-1  | INFO:     127.0.0.1:43364 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/pedidos HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/pedidos HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/pedidos/eventos HTTP/1.1" 200 OK
+orders-service-1   | INFO:     172.19.0.1:49352 - "GET /docs HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones/salud HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones/salud HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones/salud HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones/salud HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:43372 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones/salud HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones/salud HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones/salud HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones/salud HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones/salud HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones/salud HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/notificaciones HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:51394 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/pedidos/resumen HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:36970 - "GET /api/pedidos/eventos HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:51396 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:54154 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:54156 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:53728 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:53742 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:58396 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:58398 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     127.0.0.1:54102 - "GET /health HTTP/1.1" 200 OK
+gateway-service-1  | INFO:     172.19.0.1:45822 - "GET /docs HTTP/1.1" 200 OK

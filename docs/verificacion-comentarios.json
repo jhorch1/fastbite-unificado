@@ -1,0 +1,9 @@
+{
+  "archivos_python_comprobados": 13,
+  "python_ast_sin_cambios": true,
+  "diferencias_ast": [],
+  "compose_sin_cambios": true,
+  "dockerfile_sin_cambios_ejecutables": true,
+  "david_sin_cambios": true,
+  "powershell_sin_cambios_ejecutables": true
+}

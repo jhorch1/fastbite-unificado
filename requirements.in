@@ -1,0 +1,5 @@
+# Dependencias directas; requirements.txt fija las versiones y sus dependencias transitivas.
+fastapi
+uvicorn
+httpx
+pika

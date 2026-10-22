@@ -1,0 +1,33 @@
+G:\IUP - Yamith Alexander Ardila Cabrera\Ingenieria en Sistemas - Alexsters\Materias\Arquitectura de Software\Unificar Fastbite\Fastbite Unificado\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_usuarios_y_menu_v2 (test_unificado.CatalogosTest.test_usuarios_y_menu_v2) ... ok
+test_errores_gateway (test_unificado.GatewayTest.test_errores_gateway) ... ok
+test_proxy_metodo_cuerpo_query_estado_y_headers (test_unificado.GatewayTest.test_proxy_metodo_cuerpo_query_estado_y_headers) ... ok
+test_rutas_raiz_y_compatibilidad_v4 (test_unificado.GatewayTest.test_rutas_raiz_y_compatibilidad_v4) ... ok
+test_servicio_desconocido (test_unificado.GatewayTest.test_servicio_desconocido) ... ok
+test_404_dependencia (test_unificado.PedidosTest.test_404_dependencia) ... ok
+test_actualizaciones_vacias_invalidas_y_no_existente (test_unificado.PedidosTest.test_actualizaciones_vacias_invalidas_y_no_existente) ... ok
+test_cancelacion_reflejada_en_cqrs_mismo_id (test_unificado.PedidosTest.test_cancelacion_reflejada_en_cqrs_mismo_id) ... ok
+test_ciclo_completo_alias_y_final (test_unificado.PedidosTest.test_ciclo_completo_alias_y_final) ... ok
+test_creacion_total_y_contrato_v2 (test_unificado.PedidosTest.test_creacion_total_y_contrato_v2) ... ok
+test_creaciones_concurrentes_ids_unicos (test_unificado.PedidosTest.test_creaciones_concurrentes_ids_unicos) ... ok
+test_dependencia_caida_o_timeout (test_unificado.PedidosTest.test_dependencia_caida_o_timeout) ... ok
+test_ejemplos_idempotentes_y_coherentes (test_unificado.PedidosTest.test_ejemplos_idempotentes_y_coherentes) ... ok
+test_evento_y_outbox_rollback_atomico (test_unificado.PedidosTest.test_evento_y_outbox_rollback_atomico) ... ok
+test_metodo_invalido_no_consulta_ni_persiste (test_unificado.PedidosTest.test_metodo_invalido_no_consulta_ni_persiste) ... ok
+[notificador] usuario 1: Hola Prueba: tu pedido #1 por $8000 fue creado. Estado del pedido: creado. Pago con efectivo: aprobado.
+test_notificador_deduplica_y_ack_despues_guardado (test_unificado.PedidosTest.test_notificador_deduplica_y_ack_despues_guardado) ... ok
+test_notificador_fallo_db_no_ack (test_unificado.PedidosTest.test_notificador_fallo_db_no_ack) ... ok
+test_notificador_malformados_se_descartan (test_unificado.PedidosTest.test_notificador_malformados_se_descartan) ... ok
+test_persistencia_replay_y_ids_tras_reabrir (test_unificado.PedidosTest.test_persistencia_replay_y_ids_tras_reabrir) ... ok
+test_publicador_conserva_snapshot_y_pendiente_al_reabrir (test_unificado.PedidosTest.test_publicador_conserva_snapshot_y_pendiente_al_reabrir) ... ok
+test_put_rechazado_no_altera_estado_eventos_outbox (test_unificado.PedidosTest.test_put_rechazado_no_altera_estado_eventos_outbox) ... ok
+test_respuestas_invalidas_no_generan_pedido_gratuito (test_unificado.PedidosTest.test_respuestas_invalidas_no_generan_pedido_gratuito) ... ok
+test_tarjeta_rechazada_cancela (test_unificado.PedidosTest.test_tarjeta_rechazada_cancela) ... ok
+test_tres_plugins (test_unificado.PedidosTest.test_tres_plugins) ... ok
+test_validacion_items_ids_cantidades (test_unificado.PedidosTest.test_validacion_items_ids_cantidades) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 2.548s
+
+OK
